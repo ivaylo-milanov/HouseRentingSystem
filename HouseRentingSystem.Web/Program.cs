@@ -1,6 +1,7 @@
 using HouseRentingSystem.Data;
 using HouseRentingSystem.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using HouseRentingSystem.Web.Infrastructure.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 })
     .AddEntityFrameworkStores<HouseRentingDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddApplicationServices();
 
 WebApplication app = builder.Build();
 

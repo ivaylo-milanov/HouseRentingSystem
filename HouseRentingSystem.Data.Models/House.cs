@@ -36,6 +36,10 @@
         [Required]
         public string ImageUrl { get; set; } = null!;
 
+        [Comment("house created on date")]
+        [Required]
+        public DateTime CreatedOn { get; set; }
+
         [Comment("house price per month")]
         [Required]
         public decimal PricePerMonth { get; set; }
